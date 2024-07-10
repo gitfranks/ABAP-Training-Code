@@ -1,0 +1,38 @@
+CLASS zcl_mo_contional DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_mo_contional IMPLEMENTATION.
+
+  METHOD if_oo_adt_classrun~main.
+
+CONSTANTS c_constant type i value 0 .
+*contants c_constand type i value 1.
+
+if c_constant = 1 .
+out->write( `_____________________` ).
+out->write( `The constand is one` ).
+
+ELSEIF c_constant = 0 .
+
+out->write( `The constatnt is 0` ).
+
+else .
+
+out->write( `Nothing matches` ).
+
+
+
+ENDIF.
+  ENDMETHOD.
+ENDCLASS.
